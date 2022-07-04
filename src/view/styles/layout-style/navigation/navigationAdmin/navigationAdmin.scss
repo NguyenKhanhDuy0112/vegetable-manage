@@ -1,0 +1,66 @@
+.navigationAdmin{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 11;
+    width: 220px;
+    background: #fff;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all ease .3s;
+    @include responsive (lg-screen){
+        transform: translateX(0);
+        opacity: 1;
+    }
+    &.active{
+        transform: translateX(0);
+        opacity: 1;
+    }
+    
+  
+    &__container{
+        flex-direction: column;
+        overflow-y: scroll;
+        @include responsive(md-screen){
+            overflow-y: auto;
+        }
+        
+    }
+    &__top{
+        height: 60px;
+    }
+    &__list{
+
+    }
+    &__item{
+        &-link{
+            position: relative;
+            color: $color-text;
+            font-size: 0.9rem;
+            font-weight: 600;
+            &.active{
+                color: $color-green;
+                &::after{
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    border-radius: 5px;
+                    display: block;
+                    background-color: $color-green;
+                    width: 5px;
+                    height: 100%;
+                }
+            }
+            
+            &:hover{
+                color: #046c4e;
+            }
+            &-icon{
+                font-size: 1.2rem;
+            }
+        }
+    }
+}

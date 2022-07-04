@@ -1,0 +1,15 @@
+.time {
+    &__dealWeek-time {
+        display: inline-flex;
+        justify-content: center;
+        padding: 13px 10px;
+        align-items: center;
+        border-radius: 8px;
+        font-size: 1.4rem;
+        font-weight: 700;
+        width: 60px;
+        color: $btn-primary;
+        height: 50px;
+        background-color: #fdf6e3;
+    }
+}

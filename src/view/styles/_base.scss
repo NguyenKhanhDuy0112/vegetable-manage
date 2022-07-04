@@ -1,0 +1,208 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-weight: normal;
+    font-family: "Signika Negative", sans-serif;
+}
+#root {
+    overflow: hidden;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+a {
+    text-decoration: none;
+}
+.containerAdmin {
+    width: 100%;
+    padding: 0 0.5rem;
+    margin: 0 auto;
+
+    @include responsive(sm-screen) {
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    bottom: 0;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.35);
+    opacity: 0;
+    transition: all ease 0.3s;
+    &.active {
+        opacity: 1;
+        display: block;
+    }
+}
+.title {
+    color: $text-heading;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.color-primary {
+    color: $btn-primary;
+}
+.color-bc {
+    color: #bcbcbc;
+}
+.border-bottom {
+    border-bottom: 1px solid #f2f2f2;
+}
+.text-heading {
+    color: $text-heading !important;
+}
+.admin__main {
+    float: right;
+    width: 100%;
+    @include responsive(lg-screen) {
+        width: calc(100% - 220px);
+    }
+}
+.border-right {
+    border-right: 1px solid $color-border;
+}
+.border-bottom-2 {
+    border-bottom: 2px solid $color-border;
+}
+.border-top-2 {
+    border-top: 2px solid $color-border;
+}
+.border-2-circle-20 {
+    border: 2px solid $color-border;
+    border-radius: 20px;
+}
+.color-bc{
+    color: #bcbcbc;
+}
+.bg-admin {
+    min-height: 100vh;
+    height: auto;
+    background-color: #f9fafb;
+}
+.margin-top-3 {
+    margin-top: 3.5rem;
+}
+.modalAdmin__title {
+    font-size: 1.3rem;
+}
+.modalAdmin__des {
+    font-size: 0.9rem;
+    color: $color-text;
+    font-weight: 400;
+}
+.react-tag-input {
+    padding: 0.7rem;
+    font-size: 0.9rem;
+    background-color: #f4f5f7;
+    width: 100%;
+    border-radius: 7px;
+    border: 1px solid #e5e7eb;
+    &__input {
+        &::placeholder {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        &:focus {
+            background-color: #fff;
+        }
+    }
+}
+
+//reset bootstrap
+.form-control:focus {
+    box-shadow: none !important;
+}
+.btn{
+	border:none !important;
+}
+.btn:focus{
+    box-shadow: none !important;
+}
+
+.container-plugin {
+    max-width: 100%;
+    width: 100%;
+    padding: 0 1rem;
+    @include responsive(md-screen) {
+        padding: 0 1.5rem;
+    }
+}
+
+//scroll bar
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 5px;
+}
+
+//btn
+.btn-default {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px 12px 28px 12px;
+    font-size: 1.2rem;
+    border: none;
+    outline: none;
+    width: 50px;
+    height: 50px;
+    transition: all ease 0.3s;
+    &-notify {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: -10%;
+        right: -10%;
+        font-size: 0.7rem;
+        font-weight: 600;
+        min-width: 1.45rem;
+        min-height: 1.45rem;
+        background-color: $btn-primary;
+        border-radius: 50%;
+        border: 2px solid #fff;
+        color: $text-heading;
+    }
+    &:hover {
+        border-radius: 12px;
+    }
+}
+
+.modal__text-head{
+	font-weight: 400;
+	font-size: 1.2rem;
+}
+.modal__text-sub{
+	font-size: 0.9rem;
+}
+.modal__btn-cancel{
+	background-color: #e5e7eb;
+	font-size: 0.9rem;
+}
+.modal__btn-delete{
+	font-size: 0.9rem;
+}
+
+input[type="date"]::before{
+    color: #999;
+    content: attr(placeholder) ": ";
+}
+input[type="date"]:focus::before {
+    content: "" !important;
+}

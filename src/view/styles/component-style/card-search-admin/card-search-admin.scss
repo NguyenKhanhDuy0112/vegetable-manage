@@ -1,0 +1,33 @@
+.cardSearchAdmin{
+
+    &__img{
+        
+
+        &-child{
+            object-fit: cover;
+            height: 60px;
+        width: 60px;
+        }
+    }
+    &__content{
+        
+        &-title{
+            font-weight: 600;
+            font-size: 1rem;
+        }
+        &-quantity{
+            font-size: 0.75rem;
+            color: rgb(105, 104, 104);
+        }
+        &-id{
+            font-size: 0.75rem;
+            color: #ccc;
+            color: rgb(105, 104, 104);
+        }
+        &-price{
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: $color-green;
+        }
+    }
+}

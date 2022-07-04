@@ -1,0 +1,89 @@
+.product-ad-info{
+    &__img{
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__status{
+        font-weight: 600;
+        color: #7D8182;
+        font-size: 0.9rem;
+
+        &-text{
+            display: inline-block;
+            margin-left: 10px;
+            color: $color-green;
+
+            &-hidden{
+                color: #F98080;
+            }
+        }
+    }
+    &__title{
+        font-weight: 600;
+    }
+    &__sku{
+        color: #7D8182;
+        font-size: 0.9rem;
+        font-weight: 500;
+
+        &-text{
+            color: rgb(112,114,117);
+            font-weight: 700;
+        }
+    }
+    &__price{
+        display: flex;
+        align-items: flex-end;
+        &-old{
+            color: #9E9E9E;
+            text-decoration: line-through;
+            font-weight: 600;
+        }
+        &-current{
+            font-weight: 700;
+            margin-right: 8px;
+        }
+    }
+    &__quantity{
+        &-text{
+            display: inline-block;
+            margin-left: 10px;
+            font-weight: 400;
+            color: #827875;
+            font-size: 0.9rem;
+        }
+    }
+    &__des{
+        font-weight: 400;
+        color: #827875;
+        font-size: 0.9rem;
+    }
+    &__category{
+        font-weight: 600;
+        font-size: 0.95rem;
+        &-child{
+            color: #827875;
+        }
+    }
+    &__tag{
+        &-child{
+            background-color: rgb(229,231,235);
+            margin-right: 10px;
+            font-size: 0.75rem;
+            border-radius: 10px;
+            padding: 5px;
+            font-weight: 600;
+            color: #827875;
+        }
+    }
+    &__btn{
+        font-size: 0.9rem;
+        &:focus{
+            border: none;
+            box-shadow: 0 0 0 transparent !important;
+        }
+    }
+}

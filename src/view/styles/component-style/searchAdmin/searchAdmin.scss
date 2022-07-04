@@ -1,0 +1,49 @@
+.searchAdmin{
+    background-color: #fff;
+    border-radius: 7px;
+    border: 1px solid #E5E7EB;
+    &__input{
+        border: none;
+        outline: none;
+        padding: 0.7rem;
+        font-size: 0.9rem;
+        background-color: #F4F5F7;
+        display: inline-block;
+        width: 100%;
+        border-radius: 7px;
+        border: 1px solid #E5E7EB;
+        &::placeholder{
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        &:focus{
+            background-color: #fff;
+        }
+    }
+    &__btn{
+        height: 100%;
+        width: 100%;
+        min-height: 35px;
+        border: none;
+        outline: none;
+        font-size: 0.9rem;
+        background-color: $color-green;
+        color: #fff;
+        border-radius: 7px;
+        transition: all ease .3s;
+        &:hover{
+            background-color:#057a55;
+        }
+    }
+    &__not-found{
+        width: 15rem;
+        display: flex;
+        justify-content: center;
+        @include responsive(md-screen){
+            width: 30rem;
+        }
+        &-text{
+            font-size: 1.2rem;
+        }
+    }
+}

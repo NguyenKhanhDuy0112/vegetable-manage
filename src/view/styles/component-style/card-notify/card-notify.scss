@@ -1,0 +1,18 @@
+.card__notify{
+
+    &-img{
+        width: 2rem;
+    }
+    &-title{
+        color: $color-text;
+        font-size: 0.9rem;
+        font-weight: 500;
+    }
+    &-content{
+        &-date{
+            color: $color-text;
+            font-size: 0.65rem;
+            font-weight: 500;
+        }
+    }
+}

@@ -1,0 +1,110 @@
+.chat{
+    position: fixed;
+    bottom: 1rem;
+    z-index: 3;
+    right: 1rem;
+    &__content{
+        position: relative;
+        &-btn{
+            border: none;
+            outline: none;
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            justify-content: space-between;
+            
+            padding: 0.6rem 1.54rem;
+            background-color: $btn-primary;
+            border-radius: 20px;
+            &:hover{
+                background-color: $text-heading;
+                color: #fff;
+            }
+            &-icon{
+                font-weight: 900;
+            }
+        }
+        &-box{
+            position: fixed;
+            height: 80vh;
+            border-radius: 10px;
+            overflow: hidden;
+            bottom: 1rem;
+            right: 1rem;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 55vh;
+            display: none;
+            transition: all ease .3s;
+            &.active{
+                display: block;
+                opacity: 1;
+            }
+            &-header{
+                background-color: $btn-primary;
+
+                &-close{
+                    border-radius: 6px;
+                    transition: all ease .3s;
+                    &:hover{
+                        background-color: #caa335;
+                        cursor: pointer;
+                    }
+                }
+            }
+            &-label{
+                background-color: #fff;
+                border-bottom: 1px solid $color-border;
+            }
+            &-body{
+                height: 100%;
+                background-color: #fff;
+                border-radius: 0 0 10px 10px;
+                &-inbox{
+                   height: 70%;
+                    overflow-y: scroll;
+                    &-avatar{
+                        background-color: $btn-primary;
+                        border-radius: 50%;
+                        height: 2.2rem;
+                        width: 2.2rem;
+                    }
+                    &-get{
+                        background-color: #E9EBED;
+                        border-radius: 15px;
+                        display: inline-block;
+                        padding: 0.5rem 0.8rem;
+                        font-size: 14px;
+                        max-width: 80%;
+                    }
+                    &-send{
+                        background-color: $btn-primary;
+                        border-radius: 15px;
+                        display: inline-block;
+                        font-size: 14px;
+                        padding: 0.5rem 0.8rem;
+                        max-width: 87%;
+                        &-icon{
+                            color: $btn-primary;
+                        }
+                    }
+                }
+                &-send{
+                    &-input{
+                        width: 100%;
+                        border-radius: 4px;
+                        border: 1px solid rgb(216, 220, 222);
+                        font-size: 14px;
+                        padding: 0.7rem 0.8rem;
+                        outline: none;
+                        transition: all ease .3s;
+                        &:focus{
+                            box-shadow: rgba(153, 153, 153, 0.4) 0px 0px 0px 0.214286rem !important;
+                            border-color: rgb(104, 115, 125) !important;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}

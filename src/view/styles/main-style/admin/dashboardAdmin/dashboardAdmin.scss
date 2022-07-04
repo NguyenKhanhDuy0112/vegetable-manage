@@ -1,0 +1,87 @@
+.dashboard {
+    &__container{
+        background-color: #fff;
+        box-shadow: 0 3px 20px 5px rgba(0 ,0 ,0, 0.03);
+        &-child{
+            background-color: #F9FAFB;
+        }
+    }
+    &__body{
+        padding: 10px 10px 10px 10px;
+    }
+    &__title {
+        font-size: 1.2rem;
+
+        &-tab{
+            background-color: transparent;
+            margin-top: 3.75rem;
+            font-size: 1rem;
+            padding: 1rem;
+            cursor: pointer;
+            transition: all ease .4s;
+            &:hover{
+                background-color: #fff;
+                color: $color-green;
+            }
+           
+            
+        
+            &.active{
+                background-color: #fff;
+                color: $color-green;
+            }
+        }
+    }
+
+    &__total {
+        background-color: #fff;
+        border: 1px solid #e5e7eb;
+        display: flex;
+        border-radius: 6px;
+        &-icon {
+            display: inline-block;
+            width: 3rem;
+            height: 3rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+            border-radius: 50%;
+            &-order {
+                background-color: $background-total;
+                color: $color-order;
+            }
+            &-pending {
+                background-color: $background-pending;
+                color: $color-pending;
+            }
+            &-process {
+                background-color: $background-process;
+                color: $color-process;
+            }
+            &-delivery {
+                background-color: $background-delivery;
+                color: $color-delivery;
+            }
+        }
+        &-title {
+            color: $color-text;
+            font-size: 14px;
+        }
+        &-number {
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+    }
+    &__chart {
+        &-item {
+            background-color: #fff;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            &-title{
+                font-size: 1rem;
+                font-weight: 700;
+            }
+        }
+    }
+}

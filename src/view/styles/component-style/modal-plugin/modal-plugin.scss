@@ -1,0 +1,137 @@
+.modalPlugin {
+    position: fixed;
+    z-index: 11;
+    visibility: hidden;
+    opacity: 0;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    transition: all ease 0.3s;
+
+    &__header{
+        border-bottom: 1px solid $color-border;
+        padding: 0.8rem 0;
+        &-title{
+            font-weight: 600;
+        }
+    }
+    &.active{
+        visibility: visible;
+    }
+
+    &.left {
+        top: 0;
+        left: 0;
+        bottom: 0;
+        transform: translateX(-100%);
+        transition: all ease .3s;
+        &.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    &.right {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        transform: translateX(100%);
+        transition: all ease .3s;
+        &.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    &.top {
+        top: 0;
+        left: 0;
+        right: 0;
+        transform: translateY(-100%);
+        transition: all ease .3s;
+        &.active {
+           opacity: 1;
+           transform: translateY(0);
+        }
+    }
+
+    &.center {
+        top: 50%;
+        overflow: hidden;
+        width: 95%;
+        left: 50%;
+        height: 99vh;
+        transform: translate(-50%, -70%);
+        transition: all ease .5s;
+        @include responsive (md-screen){
+            width: 90%;
+            height: 80vh;
+        }
+        @include responsive (lg-screen){
+            width: 65%;
+            height: 70vh;
+        }
+        &.active {
+            opacity: 1;
+            transform: translate(-50%, -50%);
+            
+        }
+    }
+}
+
+@keyframes fadeModalLeft {
+    from{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeModalRight{
+    from{
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeModalTop{
+    from{
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeModalCenter {
+    from{
+        opacity: 0;
+        transform: rotate3d(0, -4, 0, 80deg);
+    }
+
+    to{
+        opacity: 1;
+        transform: rotate3d(0, 0, 0, 0deg);
+    }
+}
+
+@keyframes fadeModalCenterUnmounted {
+    from{
+        opacity: 1;
+        transform: rotate3d(0, 0, 0, 0deg);
+    }
+
+    to{
+        opacity: 0;
+        transform: rotate3d(0, 4, 0, 80deg);
+    }
+}
+

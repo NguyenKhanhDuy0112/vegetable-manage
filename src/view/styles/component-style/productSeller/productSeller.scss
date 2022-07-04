@@ -1,0 +1,19 @@
+.productSeller{
+    &:hover &__btn{
+        background-color: $btn-primary;
+        color: #000;
+    }
+    &__img{
+        max-width: 100px;
+        height: auto;
+    }
+    &__btn{
+        width: 36px;
+        height: 36px;
+        color: #ccc;
+        &:hover{
+            color: #000;
+            background-color: $btn-primary;
+        }
+    }
+}

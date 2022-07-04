@@ -1,0 +1,36 @@
+.checkout{
+
+    &__billDetail{
+        &-form{
+            &-input{
+                width: 100%;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                outline: none;
+                padding: 5px 15px;
+                font-size: 0.9rem;
+            }
+            &-label{
+                margin-bottom: 7px;
+                display: block;
+                color: $color-sub;
+            }
+        }
+    }
+    &__order{
+        padding: 30px;
+        background-color: #f8f8f8;
+        border: 2px solid #e0e0e0;
+
+        &-title{
+            font-weight: 700;
+           padding-bottom: 30px;
+            text-transform: uppercase;
+        }
+        &-table{
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 20px;
+        }
+    }
+}

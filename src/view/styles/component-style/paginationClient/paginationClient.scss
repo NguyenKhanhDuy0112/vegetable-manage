@@ -1,0 +1,23 @@
+.paginationClient{
+
+    &__child{
+        border: none;
+        outline: none;
+        font-size: 14px;
+        font-weight: 600;
+        background-color: transparent;
+        padding: 10px 17px;
+        border-radius: 12px 12px 20px 8px;
+        &:hover{
+            background-color: #F4F4F4;
+            color: #000;
+        }
+        &.active{
+            background-color: $btn-primary;
+            color: $text-heading;
+        }
+        &.next{
+            color: $text-heading;
+        }
+    }
+}

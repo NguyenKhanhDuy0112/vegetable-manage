@@ -1,0 +1,114 @@
+.shop {
+    &__product {
+        &-show {
+            color: #656565;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        &-btn {
+            cursor: pointer;
+            &:hover {
+                color: $text-heading;
+            }
+        }
+        &-sort {
+            border: none;
+            outline: none;
+            font-size: 14px;
+            font-weight: 500;
+            border-radius: 5px;
+            padding: 10px 20px;
+            color: #656565;
+            background-color: #f4f4f4;
+        }
+    }
+    &__sideBar {
+        border: 2px solid $color-border;
+        border-radius: 20px;
+        &-heading {
+            color: $text-heading;
+            font-weight: 600;
+            font-size: 1.15rem;
+        }
+        &-category {
+            border-bottom: 1px solid $color-border;
+            &-list {
+                list-style-type: none;
+                &-item {
+                    position: relative;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        border-radius: 50%;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        width: 5px;
+                        height: 5px;
+                        background-color: $btn-primary;
+                    }
+                    &-link {
+                        color: #6f7674;
+                        font-weight: 500;
+                        font-size: 0.9rem;
+                        border-bottom: 2px solid transparent;
+                        transition: all ease 0.1s;
+                        line-height: 10px;
+                        &:hover {
+                            color: $text-heading;
+                            border-bottom: 2px solid $text-heading;
+                        }
+                    }
+                }
+            }
+        }
+        &-filter {
+            border-bottom: 1px solid $color-border;
+            &-input {
+                &-child {
+                    outline: none;
+                    font-size: 13px;
+                    font-weight: 700;
+                    border: 1px solid #ccc;
+                    padding: 10px;
+                    border-radius: 5px;
+                }
+            }
+            &-btn {
+                border: none;
+                outline: none;
+                color: $text-heading;
+                background-color: $btn-primary;
+                border-radius: 10px;
+                display: inline-flex;
+                float: right;
+                font-size: 0.8rem;
+                padding: 3px 10px;
+                font-weight: 500;
+                &:hover {
+                    color: #000;
+                }
+            }
+        }
+        &-product {
+            border-bottom: 1px solid $color-border;
+        }
+        &-tags {
+            &-child {
+                display: inline-block;
+                font-size: 14px;
+                padding: 2px 15px;
+                margin-bottom: 10px;
+                margin-right: 10px;
+                border-radius: 24px;
+                border: 1px solid #F2F2F2;
+                color: #746765;
+                background-color: transparent;
+                &:hover {
+                    background-color: $text-heading;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

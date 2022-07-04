@@ -1,0 +1,140 @@
+.productDetail {
+    &__top {
+        &-img {
+            width: 100%;
+
+            transition: all ease 0.3s;
+            &.active {
+                border-color: $btn-primary;
+            }
+            &-child {
+                width: 100%;
+            }
+        }
+        &-content {
+            &-title {
+                font-weight: 700;
+                clear: none;
+                color: #3d3d3d;
+            }
+
+            &-des {
+                color: $color-sub;
+                font-weight: 500;
+                line-height: 1.5;
+                font-size: 0.9rem;
+            }
+            &-unit {
+                color: $color-sub;
+            }
+
+            &-cart {
+                border-top: 1px solid $color-border;
+                border-bottom: 1px solid $color-border;
+                align-items: stretch;
+
+                &-btn {
+                    border: none;
+                    outline: none;
+                    color: $text-heading;
+                    background-color: $btn-primary;
+                    font-weight: 700;
+                    padding: 7px 30px;
+                    border-radius: 10px;
+                    opacity: 0.97;
+                    transition: all ease 0.3s;
+                    &-icon {
+                        font-size: 1.5rem;
+                    }
+                    &:hover {
+                        opacity: 1;
+                        color: #000;
+                    }
+                }
+            }
+
+            &-wishlist {
+                border-top: 1px solid $color-border;
+                border-bottom: 1px solid $color-border;
+
+                &-btn {
+                    background-color: transparent;
+                    color: $color-sub;
+                    border: none;
+                    outline: none;
+                }
+            }
+            &-sku {
+                color: $color-sub;
+                font-size: 0.98rem;
+            }
+        }
+    }
+
+    &__center {
+        background-color: #f9f9f9;
+        &-content {
+            &-btn {
+                border: none;
+                outline: none;
+                font-weight: 700;
+                font-size: 1.3rem;
+                color: #000;
+                background-color: transparent;
+                padding: 7px 20px;
+                border-radius: 5px;
+                transition: all ease 0.3s;
+                &.active {
+                    background-color: $btn-primary;
+                    color: $text-heading;
+                }
+
+                &:hover {
+                    background-color: $btn-primary;
+                    color: $text-heading;
+                }
+            }
+
+            &-des {
+                background-color: #fff;
+                padding: 24px 30px;
+                border-radius: 20px;
+
+                &-title {
+                    color: $text-heading;
+                    font-weight: 600;
+                }
+                &-text {
+                    color: $color-sub;
+                }
+            }
+        }
+        &-review {
+            &-input {
+                display: block;
+                font-size: 0.9rem;
+                padding: 10px 15px;
+                border: 2px solid $color-border;
+                border-radius: 4px;
+                width: 100%;
+            }
+            &-btn {
+                border: none;
+                padding: 11px 45px;
+                outline: none;
+                background-color: $btn-primary;
+                font-weight: 700;
+                border-radius: 5px;
+                width: 100%;
+
+                @include responsive(md-screen) {
+                    width: auto;
+                }
+                &:hover {
+                    background-color: $text-heading;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

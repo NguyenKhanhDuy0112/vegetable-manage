@@ -1,0 +1,14 @@
+.banner{
+    &__link{
+        color: #bcbcbc;
+        border-bottom: 1px solid transparent;
+        line-height: 15px;
+        &:hover{
+            color: $text-heading;
+            border-bottom: 1px solid $text-heading;
+        }
+        &.active{
+            color: #4d4d4d;
+        }
+    }
+}

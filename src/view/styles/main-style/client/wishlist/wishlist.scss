@@ -1,0 +1,47 @@
+.wishlist{
+    &__table{
+        &-td{
+            &-img{
+                width: 100px;
+                & img{
+                    width: 100%;
+                }
+            }
+        }
+        &-title{
+            color: #000;
+            font-weight: 600;
+            &:hover{
+                color: $text-heading;
+            }
+        }
+        &-price{
+            &-current{
+                font-weight: 600;
+            }
+            &-old{
+                color: $color-sub;
+                font-size: 0.9rem;
+            }
+        }
+        &-date{
+            color: $color-sub;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        &-btn{
+            border: none;
+            outline: none;
+            background-color: $btn-primary;
+            color: #000;
+            font-size: 0.9rem;
+            font-weight: 600;
+            padding: 0.7rem 2rem;
+            border-radius: 5px;
+            &:hover{
+                background-color: $text-heading;
+                color: #fff;
+            }
+        }
+    }
+}

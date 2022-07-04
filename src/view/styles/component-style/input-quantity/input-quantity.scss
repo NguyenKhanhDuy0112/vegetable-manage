@@ -1,0 +1,36 @@
+.inputQuantity {
+    position: relative;
+    display: flex;
+    &__btn {
+        display: block;
+        height: 100%;
+        width: 50px;
+        border: none;
+        outline: none;
+        background-color: #fff;
+        border: 2px solid $color-border;
+        transition: all ease .27s;
+        &.minus {
+            border-radius: 10px 0 0 10px;
+            border-color: $color-border transparent $color-border $color-border;
+        }
+        &.plus {
+            border-radius: 0 10px 10px 0px;
+            border-color: $color-border $color-border $color-border transparent;
+        }
+        &:hover {
+            background-color: $btn-primary;
+        }
+    }
+
+    &__input {
+        border: none;
+        display: block;
+        background-color: #f4f4f4;
+        outline: none;
+        font-size: 12px;
+        text-align: center;
+        font-weight: 600;
+        width: 50px;
+    }
+}
